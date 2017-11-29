@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Emlak Portalı</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <style>
+    
+    .page-wrapper {
+    position: inherit;
+    padding: 0 30px;
+    min-height: 568px;
+    }   
+    </style>
+
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse bg-faded">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#">Emlak Portalı</a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Anasayfa</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="emlakekle.html">Emlak Ekle/Duzenle</a>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="page-wrapper">
+                    <div class="row">
+                            <div class="col-lg-12">
+                                <h1 class="page-header">Ürünler
+            
+                                        <div class="pull-right">
+                                                <a href="#" type="button" class="btn btn-success" data-toggle="modal" data-target="#EmlakEkle"><i class="fa fa-plus"></i> Ürün Ekle</a>
+                                        </div>
+                                </h1>
+                                
+                                
+                            </div>
+                            <!-- /.col-lg-12 -->
+                        </div>
+                    <div class="row">
+                            <div class="col-lg-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                            Emlaklar
+                                    </div>
+                                    <!-- /.panel-heading -->
+                                    <div class="panel-body">
+                                        <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Emlak Adı</th>
+                                                    <th>Emlak Fiyatı</th>
+                                                    <th>Emlak Açıklama</th>
+                                                    <th>Emlak Kategori</th>
+                                                    <th>Görüntülenme</th>
+                                                    <th>Eylem</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="">
+                                                    <td>1</td>
+                                                    <td>Emlak Adı</td>
+                                                    <td>100</td>
+                                                    <td>Emlak Açıklama</td>
+                                                    <td>Emlak Kategori</td>
+                                                    <td>1</td>
+                                                    <td>
+                                                        <a href="" class="btn btn-warning" data-toggle="modal" data-target="#EmlakEdit" type="button"><i class="fa fa-edit"></i>Düzenle</a> <a href="" class="btn btn-danger"><i class="fa fa-trash"></i>Sil</a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="">
+                                                        <td>2</td>
+                                                        <td>Emlak Adı</td>
+                                                        <td>100</td>
+                                                        <td>Emlak Açıklama</td>
+                                                        <td>Emlak Kategori</td>
+                                                        <td>1</td>
+                                                        <td>
+                                                            <a href="" class="btn btn-warning" data-toggle="modal" data-target="#EmlakEdit" type="button"><i class="fa fa-edit"></i>Düzenle</a> <a href="" class="btn btn-danger"><i class="fa fa-trash"></i>Sil</a>
+                                                        </td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- /.table-responsive -->
+                                    </div>
+                                    <!-- /.panel-body -->
+                                </div>
+                                <!-- /.panel -->
+                            </div>
+                            <!-- /.col-lg-12 -->
+                        </div>
+                        <!-- /.row -->
+
+                        <!-- Haber Ekle -->
+                    <div class="modal fade bs-example-modal-lg" id="EmlakEkle" tabindex="-1" role="dialog" aria-labelledby="Haber Ekle" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="UrunAdd">
+                                            Emlak Ekle
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                            <div class="form-group">
+                                                <label>Emlak Başlığı</label>
+                                                <input class="form-control">
+                                                <p class="help-block">Emlak başlığını giriniz...</p>
+                                            </div>
+                                            <div class="form-group">
+                                                    <label>Emlak Fiyatı</label>
+                                                    <input class="form-control">
+                                                    <p class="help-block">Emlak fiyatını giriniz...</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Emlak Açıklaması</label>
+                                                <input class="form-control">
+                                                <p class="help-block">Emlak açıklamasını giriniz...</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Emlak Kategori</label>
+                                                <select class="form-control">
+                                                    <option>Kiralık</option>
+                                                    <option>Satılık</option>
+                                                </select>
+                
+                                                <p class="help-block">Emlak kategorisini seçiniz...</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Emlak Resmmleri</label>
+                                                <input type="file">
+                                                <p class="help-block">Emlak resmini yükleyiniz...</p>
+                                            </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                                        <button type="button" class="btn btn-primary">Ürün Ekle</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Haber Ekle -->
+                
+                        <!-- Haber Düzenle -->
+                        <div class="modal fade bs-example-modal-lg" id="EmlakEdit" tabindex="-1" role="dialog" aria-labelledby="Haber Düzenle" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="UrunDuzenle">
+                                                Emlak Düzenle
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                            <div class="form-group">
+                                                <label>Emlak Başlığı</label>
+                                                <input class="form-control">
+                                                <p class="help-block">Emlak başlığını giriniz...</p>
+                                            </div>
+                                            <div class="form-group">
+                                                    <label>Emlak Fiyatı</label>
+                                                    <input class="form-control">
+                                                    <p class="help-block">Emlak fiyatını giriniz...</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Emlak Açıklaması</label>
+                                                <input class="form-control">
+                                                <p class="help-block">Emlak açıklamasını giriniz...</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Emlak Kategori</label>
+                                                <select class="form-control">
+                                                    <option>Kiralık</option>
+                                                    <option>Satılık</option>
+                                                </select>
+                
+                                                <p class="help-block">Emlak kategorisini seçiniz...</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Emlak Resimleri</label>
+                                                <input type="file">
+                                                <p class="help-block">Emlak resmini yükleyiniz...</p>
+                                            </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                                        <button type="button" class="btn btn-primary">Değişiklikleri Kaydet</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Haber Düzenle -->
+            </div>
+            
+    </div>
+        
+</body>
+</html>
